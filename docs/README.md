@@ -6,12 +6,12 @@ The goal is to share common knowledge on several technical solutions.
 Clone this git repository and edit or create new documentation.
 All the documentation should be contained in markdown (`.md`) and placed within the `./docs` folder.
 
-# Requirements
+## Requirements
 - Node.js latest stable version
 - docsify: automatically generates the documentation
 https://docsify.js.org
 
-# How to preview the documentation
+## Preview the documentation
 
 After installing requirements, run:
 `docsify serve docs`
