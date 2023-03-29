@@ -7,16 +7,80 @@
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" />
+  <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-themeable/dist/css/theme-simple-dark.min.css"> -->
+  <link rel="stylesheet" href="theme-ptc.css">
 </head>
 <body>
+  <style>
+    .circle1 {
+      background-color: rgb(252,186,40);
+      border-radius: 100%;
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      z-index: -2;
+      right: 110px;
+      top: 15px;
+    }
+    .circle2 {
+      background-color: transparent;
+      border: 1px solid rgb(56, 56, 56);
+      border-radius: 100%;
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      z-index: -2;
+      right: 60px;
+      top: 35px;
+    }
+    .circle3 {
+      background-color: rgb(37,179,195);
+      border-radius: 100%;
+      width: 200px;
+      height: 200px;
+      position: absolute;
+      z-index: -1;
+      right: -130px;
+      top: -30px;
+    }
+  </style>
+  <div class="ptc-circle-holder">
+    <div class="ptc-circle circle1"></div>
+    <div class="ptc-circle circle2"></div>
+    <div class="ptc-circle circle3"></div>
+  </div>
   <div id="app"></div>
   <script>
     window.$docsify = {
-      name: '',
-      repo: ''
+      name: 'PTC Developer Manifest',
+      repo: '',
+      search: 'auto',
+      loadSidebar: true,
+      subMaxLevel: 3,
+      sidebarDisplayLevel: 1, // set sidebar display level
+      alias: {
+        '/.*/_sidebar.md': '/_sidebar.md',
+      },
+      'flexible-alerts': {
+        style: 'flat'
+      },
+      search: {
+        placeholder: 'Type to search',
+        noData: 'No Results!',
+        paths: 'auto',
+        depth: 6,
+        maxAge: 86400000, // 1 day
+        hideOtherSidebarContent: false,
+        namespace: 'PTC Developer Manifest'
+      },
     }
   </script>
   <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <!-- Plugins -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-themeable/dist/js/docsify-themeable.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>  
 </body>
 </html>
