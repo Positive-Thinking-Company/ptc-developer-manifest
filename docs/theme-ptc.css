@@ -1,0 +1,37 @@
+/* Base
+============================================================================= */
+:root {
+    --heading-font-ptc: "Montserrat ExtraBold";
+    --heading-color-ptc: rgb(255, 0, 66);
+    --heading-h2-font-ptc: "Avenir Heavy";
+
+    --heading-h1-font-family: var(--heading-font-ptc, var(--heading-font-family));
+    --heading-h1-color: var(--heading-color-ptc);
+
+    --heading-h2-font-family: var(--heading-h2-font-ptc, var(--heading-font-family));
+    --heading-h2-color: rgb(47, 84, 150);
+
+    --heading-h3-font-family: var(--heading-h2-font-ptc, var(--heading-font-family));
+    --heading-h3-color: rgb(37, 179, 195);
+
+    --heading-h4-font-family: var(--heading-h1-font-ptc, var(--heading-font-family));
+    --heading-h4-color: rgb(37, 0, 68);
+
+}
+
+h1 .anchor span {
+    color: var(--heading-h1-color);
+}
+h2 .anchor span {
+    color: var(--heading-h2-color);
+}
+h3 .anchor span {
+    color: var(--heading-h3-color);
+}
+h4 .anchor span {
+    color: var(--heading-h4-color);
+}
+
+body {
+    background-color: transparent;
+}
