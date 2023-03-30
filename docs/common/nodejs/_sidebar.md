@@ -1,4 +1,4 @@
-- [Common](./common/README.md)
-    - [Dependencies](./common/dependencies.md)
+- [Common](/common/README.md)
+    - [Dependencies](/common/dependencies.md)
         * Node.js
-            - [Dependencies](./common/nodejs/dependencies.md)
+            - [Dependencies](/common/nodejs/dependencies.md)
