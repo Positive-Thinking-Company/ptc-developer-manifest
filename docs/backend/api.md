@@ -1,4 +1,7 @@
-# API
+#API
+
+## Checkpoints
+[filename](./api.checkpoints.md ':include')
 
 ## Stateless API
 ## Appropriate HTTP codes returned
