@@ -19,9 +19,12 @@
   </div>
   <div id="app"></div>
   <script>
+    const githubPagesUrl = '/ptc-developer-manifest/';
+
     window.$docsify = {
       name: 'PTC Developer Manifest',
       repo: '',
+      basePath: window.location.pathname.substring(0, githubPagesUrl.length) === githubPagesUrl ? githubPagesUrl : `/`,
       routerMode: 'history',
       search: 'auto',
       loadSidebar: true,
