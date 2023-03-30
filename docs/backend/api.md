@@ -1,4 +1,4 @@
-#API
+# API
 
 ## Checkpoints
 [filename](./api.checkpoints.md ':include')
