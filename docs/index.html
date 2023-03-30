@@ -19,13 +19,14 @@
   </div>
   <div id="app"></div>
   <script>
-    const productionUrl = 'https://positive-thinking-company.github.io/ptc-developer-manifest/';
-    const isDeployedOnGithubPages = window.location.href.substring(0, productionUrl.length) === productionUrl;
+    const baseProductionUrl = 'https://positive-thinking-company.github.io';
+    const productionUrl = baseProductionUrl + '/ptc-developer-manifest/';
+    let isDeployedOnGithubPages = window.location.href.substring(0, productionUrl.length) === productionUrl;
 
     window.$docsify = {
       name: 'PTC Developer Manifest',
       repo: '',
-      basePath: isDeployedOnGithubPages ? productionUrl : `/`,
+      basePath: isDeployedOnGithubPages ? baseProductionUrl : `/`,
       routerMode: 'history',
       search: 'auto',
       loadSidebar: true,
