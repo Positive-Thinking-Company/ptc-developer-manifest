@@ -22,11 +22,17 @@
     const baseProductionUrl = 'https://positive-thinking-company.github.io';
     const productionUrl = baseProductionUrl + '/ptc-developer-manifest/';
     let isDeployedOnGithubPages = window.location.href.substring(0, productionUrl.length) === productionUrl;
-
+    let basePath = isDeployedOnGithubPages ? baseProductionUrl : `/`;
+    const value = confirm('Is basePath right? ' + basePath);
+    if (!value) {
+      basePath = prompt('Enter new basePath (was set to "' + basePath + '")');
+      // override basePath if it is "null" or "undefined"
+      if (basePath === 'null') { basePath = null; } else if(basePath === 'undefined') { basePath = undefined;};
+    }
     window.$docsify = {
       name: 'PTC Developer Manifest',
       repo: '',
-      basePath: isDeployedOnGithubPages ? baseProductionUrl : `/`,
+      basePath,
       routerMode: 'history',
       search: 'auto',
       loadSidebar: true,
