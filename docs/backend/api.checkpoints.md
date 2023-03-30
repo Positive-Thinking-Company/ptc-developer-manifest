@@ -1,0 +1,7 @@
+- [x] Stateless API
+- [x] Appropriate HTTP codes returned
+- [x] Open API documentation
+- [x] API Versioning
+- [x] Organize API around resources
+- [x] Mutiple HTTP Methods are supported
+- [x] Filtering and pagination of data
