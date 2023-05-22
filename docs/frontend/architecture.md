@@ -157,3 +157,11 @@ The services doing the API calls can be located inside the store's folder:
 ```
 
 ## Decoupled types
+
+Using typescript mapper classes instead of interfaces prevents the following inconviences:
+- changes of data structure sent by the server/change of data source: the change will be made on time in the class instead of n times in the whole app,
+- defensive programming like "if(mymodel && mymodel.thearray && mymodel.thearray.length > 0)" n times in the app,
+- reapeating pieces of code. For example instead of writing in several components {{ contact.firstname + " " + contact.lastname }}, having a getter returning a "fullName" calculated property.
+
+It will help reducing bugs and readability.
+More information: https://www.joelemmer.com/typescript-choose-classes-over-interfaces/
