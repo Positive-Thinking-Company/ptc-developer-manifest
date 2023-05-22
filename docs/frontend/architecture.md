@@ -103,6 +103,57 @@ Even if the component is functionally isolated, <b>if it gets too big (more than
 
 ## Common code clearly identified
 
+In order not to have duplicated code or functional modules using the code of other functional modules, we need a common folder subdivided by category of common code:
+
+```js
+> common
+    > components
+    > filters
+    > models
+    > services
+    > styles
+    ...
+```
+
+Moving a function of component being used by several modules to the common folder is easy to identify and easy to do, but we can also anticipate, even if the component, helper or css class is only used in one module for the moment. Some examples:
+- layout components or custom form components, cards components,
+- date filters,
+- array and dates helper functions,
+- css styles common to the app (colors, forms styling, typography, spacing, tables...)
+
 ## State management
+
+Any app should have a shared state across the components/pages which is adapted to the size and complexity of the project.
+It can be a simple hand-made class if the project is very small and don't interact with an API, or an existing library (ngrx, redux, vuex, pinia...).
+
+It is better if the store is divided by functional sub-stores, just like the functional modules :
+
+```js
+> stores
+    > admin-store
+    > products-store
+    > cart-store
+    > user-store
+```
+
+And just like the components modules, if a store is getting to big, it can be divided into smaller functionnal pieces:
+
+```js
+> stores
+    > user
+        > user-profile-store
+        > user-registration-store
+```
+
+The API calls are done from the store's actions methods (not from the components directly).
+The services doing the API calls can be located inside the store's folder:
+
+```js
+> stores
+    > products-store
+        products-store.ts
+        > services
+            products.service.ts
+```
 
 ## Decoupled types
