@@ -1,0 +1,5 @@
+- [x] Feature based folder structure
+- [x] Components correctly divided
+- [x] Common code clearly identified
+- [x] State management
+- [x] Decoupled types

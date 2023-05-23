@@ -1,5 +1,8 @@
 # Architecture
 
+## Checkpoints
+[filename](./architecture.checkpoints.md ':include')
+
 ## Feature based folder structure
 
 You can create a folder per functional module, for example:
@@ -18,7 +21,7 @@ You can create a folder per functional module, for example:
 Each module folder contains a folder for its components, a shared folder for the helpers, models and services which are not related to an API, and one for the views/pages.<br>
 To see the difference a view/page and a component, see <a href="architecture.md?id=components-correctly-divided">Components correctly divided</a>.
 
-If a module is too big with too many pages and components, it can be functionaly subdivided:
+If a module is too big with too many pages and components, it can be functionally subdivided:
 
 ```js
 > modules
@@ -33,14 +36,14 @@ If a module is too big with too many pages and components, it can be functionaly
             > views
 ```
 
-We shouldn't have interactions between the files of different modules, if it's the case, the file (model, component, helper...) needs to be moved to the common folder.
+We shouldn't have interactions between the files of different modules, if it's the case, the file (model, component, helper...) needs to be moved to the common folder (see <a href="architecture.md?id=common-code-clearly-identified">Common code clearly identified</a>.).
 
 ## Components correctly divided
 ### Pages distinguished from components 
 
-We can conceptually distinguish the pages/views from the components, even if technically they are both components.
-The pages are the components being called by the router.<br> 
-For example, if you call mywebsite/products, you will tell your router to display the ProductPage component.
+We can conceptually distinguish the pages/views from the components, even if technically they are both components.<br>
+The pages are the components being called by the router.
+For example, if you call mywebsite/products, you will tell your router to display the ProductPage component.<br>
 The components are the blocks called in the pages.<br>
 We can separate the pages from the components by putting them in a pages or views folder and/or prefixing their name with "page" or "view".
 
@@ -123,8 +126,8 @@ Moving a function of component being used by several modules to the common folde
 
 ## State management
 
-Any app should have a shared state across the components/pages which is adapted to the size and complexity of the project.
-It can be a simple hand-made class if the project is very small and don't interact with an API, or an existing library (ngrx, redux, vuex, pinia...).
+Any app should have a shared state across the components/pages which is adapted to the size and complexity of the project.<br>
+It can be a simple hand-made class if the project is very small and doesn't interact with an API, or an existing library (ngrx, redux, vuex, pinia...).
 
 It is better if the store is divided by functional sub-stores, just like the functional modules :
 
