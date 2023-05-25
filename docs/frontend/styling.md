@@ -32,7 +32,7 @@ Then, to improve readability and maintainability we can create one file per cate
 
 ## Use theming as recommended
 
-All the design systems (Angular Material, Material UI, Vuetify, Quasar...) come natively with their way of applying the app theming and styling their components.
+All the design systems (Angular Material, Material UI, Vuetify, Quasar...) come natively with their way of applying the app theming and styling their components.<br/>
 Using it the more possible instead of bypassing it with custom css improves the theming development speed, the maintainability and avoid strange graphical effects.
 
 ## Use a naming convention

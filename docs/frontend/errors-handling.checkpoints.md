@@ -1,0 +1,3 @@
+- [x] Generic handling of technical errors
+- [x] Handling API calls errors
+- [x] Displaying errors to the user
