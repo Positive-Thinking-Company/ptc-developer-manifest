@@ -19,7 +19,7 @@ You can create a folder per functional module, for example:
 ```
 
 Each module folder contains a folder for its components, a shared folder for the helpers, models and services which are not related to an API, and one for the views/pages.<br>
-To see the difference a view/page and a component, see <a href="architecture.md?id=components-correctly-divided">Components correctly divided</a>.
+To see the difference a view/page and a component, see <a href="#/./frontend/architecture?id=components-correctly-divided">Components correctly divided</a>.
 
 If a module is too big with too many pages and components, it can be functionally subdivided:
 
@@ -36,7 +36,7 @@ If a module is too big with too many pages and components, it can be functionall
             > views
 ```
 
-We shouldn't have interactions between the files of different modules, if it's the case, the file (model, component, helper...) needs to be moved to the common folder (see <a href="architecture.md?id=common-code-clearly-identified">Common code clearly identified</a>.).
+We shouldn't have interactions between the files of different modules, if it's the case, the file (model, component, helper...) needs to be moved to the common folder (see <a href="#/./frontend/architecture?id=common-code-clearly-identified">Common code clearly identified</a>.).
 
 ## Components correctly divided
 ### Pages distinguished from components 

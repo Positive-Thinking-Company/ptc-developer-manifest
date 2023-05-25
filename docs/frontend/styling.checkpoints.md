@@ -1,0 +1,5 @@
+- [x] Usage of a CSS preprocessor
+- [x] Common style organization
+- [x] Avoid import caveats
+- [x] Use theming as recommended
+- [x] Use a naming convention
