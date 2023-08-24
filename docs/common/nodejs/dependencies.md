@@ -25,6 +25,20 @@ ncu @nestjs*
 ncu "/^@nestjs.*$/"
 ```
 
+For some specific cases where you don't want to get the latest version, for example:
+```json
+"@types/node": "^16.18.38"
+```
+update the package.json so it begins with the version you desire:
+```json
+"@types/node": "^18.0.0"
+```
+then run 
+```cmd
+ncu "/node/" --target minor
+```
+It will automatically update the package.json for you for the dependencies containing node.
+
 ## Check for unused dependencies
 
 Be careful, dependencies that are used by scripts are shown (so don't delete everything before doing a search on the project).
