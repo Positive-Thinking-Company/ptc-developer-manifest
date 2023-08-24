@@ -20,6 +20,7 @@ ncu
 
 Examples of usage to check for *@nestjs* prefixed packages:
 ```cmd
+ncu "/nestjs/"
 ncu @nestjs*
 ncu "/^@nestjs.*$/"
 ```
