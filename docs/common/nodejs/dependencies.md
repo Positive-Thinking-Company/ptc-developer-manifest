@@ -9,8 +9,14 @@ If using **npm** only:
 `npm outdated`
 or the recommended package from nestjs website:
 
-`npm install -g npm-check-updates`
-`ncu`
+```cmd
+npm install -g npm-check-updates
+```
+
+Then run:
+```cmd
+ncu
+``````
 
 Examples of usage to check for *@nestjs* prefixed packages:
 ```cmd
